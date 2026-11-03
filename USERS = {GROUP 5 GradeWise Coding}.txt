@@ -1,0 +1,431 @@
+USERS = {
+    "instructor1": "admin123",
+    "teacher_cite": "coc2026"
+}
+
+# Database: Student Data organized by Sections
+STUDENT_DATA = {
+    "COC-FB1-BSIT1-04": [
+        "Juan Dela Cruz",
+        "Maria Santos"
+    ],
+    "COC-FB2-BSIT1-03": [
+        "Carlos Gomez",
+        "Ana Reyes"
+    ],
+    "COC-FC1-BSIT1-01": [
+        "Antonio Luna",
+        "Gregorio del Pilar"
+    ],
+    "COC-FC1-BSIT1-03": [
+        "Emilio Aguinaldo",
+        "Andres Bonifacio"
+    ],
+    "COC-FB1-BSIT1-01": [
+        "Melchora Aquino",
+        "Gabriela Silang"
+    ],
+    "COC-FA2-BSIT1-01": [
+        "Jose Rizal",
+        "Apolinario Mabini"
+    ]
+}
+
+# Database: Comprehensive Grades Storage for ALL Students across all sections
+GRADES_DATA = {
+    "Juan Dela Cruz": {
+        "section": "COC-FB1-BSIT1-04",
+        "periods": {
+            "P1": {
+                "marks": {
+                    "PATHFIT 1": 88.0, "Purposive Communication": 85.0, "Understanding the Self": 90.0,
+                    "Ethics": 86.0, "Mathematics in the Modern World": 89.0, "NSTP 1": 92.0,
+                    "Introduction to Computing [MAJOR]": 91.0, "Computer Programming 1 [MAJOR]": 94.0
+                },
+                "total": 715.0, "average": 89.38, "percentage": 89.38, "status": "Passed (Very Satisfactory)"
+            }
+        }
+    },
+    "Maria Santos": {
+        "section": "COC-FB1-BSIT1-04",
+        "periods": {
+            "P1": {
+                "marks": {
+                    "PATHFIT 1": 90.0, "Purposive Communication": 92.0, "Understanding the Self": 88.0,
+                    "Ethics": 85.0, "Mathematics in the Modern World": 91.0, "NSTP 1": 95.0,
+                    "Introduction to Computing [MAJOR]": 93.0, "Computer Programming 1 [MAJOR]": 96.0
+                },
+                "total": 730.0, "average": 91.25, "percentage": 91.25, "status": "Passed (Excellent)"
+            }
+        }
+    },
+    "Carlos Gomez": {
+        "section": "COC-FB2-BSIT1-03",
+        "periods": {
+            "P1": {
+                "marks": {
+                    "PATHFIT 1": 78.0, "Purposive Communication": 80.0, "Understanding the Self": 82.0,
+                    "Ethics": 79.0, "Mathematics in the Modern World": 75.0, "NSTP 1": 85.0,
+                    "Introduction to Computing [MAJOR]": 83.0, "Computer Programming 1 [MAJOR]": 88.0
+                },
+                "total": 650.0, "average": 81.25, "percentage": 81.25, "status": "Passed (Very Satisfactory)"
+            }
+        }
+    },
+    "Ana Reyes": {
+        "section": "COC-FB2-BSIT1-03",
+        "periods": {
+            "P1": {
+                "marks": {
+                    "PATHFIT 1": 85.0, "Purposive Communication": 87.0, "Understanding the Self": 89.0,
+                    "Ethics": 84.0, "Mathematics in the Modern World": 86.0, "NSTP 1": 90.0,
+                    "Introduction to Computing [MAJOR]": 88.0, "Computer Programming 1 [MAJOR]": 92.0
+                },
+                "total": 701.0, "average": 87.62, "percentage": 87.62, "status": "Passed (Very Satisfactory)"
+            }
+        }
+    },
+    "Antonio Luna": {
+        "section": "COC-FC1-BSIT1-01",
+        "periods": {
+            "P1": {
+                "marks": {
+                    "PATHFIT 1": 82.0, "Purposive Communication": 84.0, "Understanding the Self": 85.0,
+                    "Ethics": 80.0, "Mathematics in the Modern World": 83.0, "NSTP 1": 88.0,
+                    "Introduction to Computing [MAJOR]": 86.0, "Computer Programming 1 [MAJOR]": 90.0
+                },
+                "total": 678.0, "average": 84.75, "percentage": 84.75, "status": "Passed (Very Satisfactory)"
+            }
+        }
+    },
+    "Gregorio del Pilar": {
+        "section": "COC-FC1-BSIT1-01",
+        "periods": {
+            "P1": {
+                "marks": {
+                    "PATHFIT 1": 85.0, "Purposive Communication": 88.0, "Understanding the Self": 90.0,
+                    "Ethics": 82.0, "Mathematics in the Modern World": 86.0, "NSTP 1": 95.0,
+                    "Introduction to Computing [MAJOR]": 92.0, "Computer Programming 1 [MAJOR]": 94.0
+                },
+                "total": 712.0, "average": 89.0, "percentage": 89.0, "status": "Passed (Good)"
+            }
+        }
+    },
+    "Emilio Aguinaldo": {
+        "section": "COC-FC1-BSIT1-03",
+        "periods": {
+            "P1": {
+                "marks": {
+                    "PATHFIT 1": 75.0, "Purposive Communication": 78.0, "Understanding the Self": 80.0,
+                    "Ethics": 76.0, "Mathematics in the Modern World": 74.0, "NSTP 1": 82.0,
+                    "Introduction to Computing [MAJOR]": 79.0, "Computer Programming 1 [MAJOR]": 81.0
+                },
+                "total": 625.0, "average": 78.12, "percentage": 78.12, "status": "Passed"
+            }
+        }
+    },
+    "Andres Bonifacio": {
+        "section": "COC-FC1-BSIT1-03",
+        "periods": {
+            "P1": {
+                "marks": {
+                    "PATHFIT 1": 92.0, "Purposive Communication": 90.0, "Understanding the Self": 94.0,
+                    "Ethics": 89.0, "Mathematics in the Modern World": 91.0, "NSTP 1": 96.0,
+                    "Introduction to Computing [MAJOR]": 95.0, "Computer Programming 1 [MAJOR]": 98.0
+                },
+                "total": 745.0, "average": 93.12, "percentage": 93.12, "status": "Passed (Excellent)"
+            }
+        }
+    },
+    "Melchora Aquino": {
+        "section": "COC-FB1-BSIT1-01",
+        "periods": {
+            "P1": {
+                "marks": {
+                    "PATHFIT 1": 89.0, "Purposive Communication": 91.0, "Understanding the Self": 92.0,
+                    "Ethics": 88.0, "Mathematics in the Modern World": 87.0, "NSTP 1": 94.0,
+                    "Introduction to Computing [MAJOR]": 90.0, "Computer Programming 1 [MAJOR]": 93.0
+                },
+                "total": 724.0, "average": 90.5, "percentage": 90.5, "status": "Passed (Excellent)"
+            }
+        }
+    },
+    "Gabriela Silang": {
+        "section": "COC-FB1-BSIT1-01",
+        "periods": {
+            "P1": {
+                "marks": {
+                    "PATHFIT 1": 91.0, "Purposive Communication": 93.0, "Understanding the Self": 95.0,
+                    "Ethics": 90.0, "Mathematics in the Modern World": 92.0, "NSTP 1": 97.0,
+                    "Introduction to Computing [MAJOR]": 94.0, "Computer Programming 1 [MAJOR]": 96.0
+                },
+                "total": 750.0, "average": 93.75, "percentage": 93.75, "status": "Passed (Excellent)"
+            }
+        }
+    },
+    "Jose Rizal": {
+        "section": "COC-FA2-BSIT1-01",
+        "periods": {
+            "P1": {
+                "marks": {
+                    "PATHFIT 1": 95.0, "Purposive Communication": 96.0, "Understanding the Self": 98.0,
+                    "Ethics": 94.0, "Mathematics in the Modern World": 95.0, "NSTP 1": 99.0,
+                    "Introduction to Computing [MAJOR]": 97.0, "Computer Programming 1 [MAJOR]": 98.0
+                },
+                "total": 772.0, "average": 96.5, "percentage": 96.5, "status": "Passed (Excellent)"
+            }
+        }
+    },
+    "Apolinario Mabini": {
+        "section": "COC-FA2-BSIT1-01",
+        "periods": {
+            "P1": {
+                "marks": {
+                    "PATHFIT 1": 88.0, "Purposive Communication": 89.0, "Understanding the Self": 90.0,
+                    "Ethics": 87.0, "Mathematics in the Modern World": 86.0, "NSTP 1": 92.0,
+                    "Introduction to Computing [MAJOR]": 91.0, "Computer Programming 1 [MAJOR]": 93.0
+                },
+                "total": 716.0, "average": 89.5, "percentage": 89.5, "status": "Passed (Very Satisfactory)"
+            }
+        }
+    }
+}
+
+def get_valid_mark(subject_name):
+    """Validates mark inputs (0-100) using try-except error handling. Allows 'back' to cancel."""
+    while True:
+        val = input(f"Enter Marks In {subject_name} (0-100) [Type 'back' to return]: ").strip()
+        if val.lower() == 'back':
+            return None
+        try:
+            mark = float(val)
+            if 0 <= mark <= 100:
+                return mark
+            else:
+                print("Invalid input. Please enter a score between 0 and 100.")
+        except ValueError:
+            print("Invalid input. Please enter a valid numerical value.")
+
+def calculate_grades(student_name, section, period):
+    """Computes total, average, percentage, and grading status for a specific period."""
+    print(f"\n==========================================")
+    print(f" Recording {period} Grades for: {student_name} ({section})")
+    print(f" Focus Major Subjects: Introduction to Computing & Computer Programming")
+    print(f"==========================================")
+    
+    marks = {}
+    
+    if period == "P1":
+        subjects = [
+            "PATHFIT 1", "Purposive Communication", "Understanding the Self",
+            "Ethics", "Mathematics in the Modern World", "NSTP 1",
+            "Introduction to Computing [MAJOR]", "Computer Programming 1 [MAJOR]"
+        ]
+    elif period == "P2":
+        subjects = [
+            "PATHFIT 2", "Art Appreciation", "Readings in Philippine History",
+            "Science, Technology, and Society", "Introduction to Computing 2 [MAJOR]",
+            "Computer Programming 2 [MAJOR]"
+        ]
+    else: # P3
+        subjects = [
+            "Physical Education 3", "Contemporary World",
+            "Data Structures and Algorithms [MAJOR]", "Object-Oriented Programming [MAJOR]"
+        ]
+        
+    for subj in subjects:
+        mark = get_valid_mark(subj)
+        if mark is None:
+            print("\n[Cancelled] Grade recording aborted. Returning to menu.")
+            return
+        marks[subj] = mark
+        
+    total = sum(marks.values())
+    count = len(marks)
+    average = total / count
+    percentage = (total / (count * 100)) * 100
+    
+    if percentage >= 90:
+        status = "Passed (Excellent)"
+    elif percentage >= 80:
+        status = "Passed (Very Satisfactory)"
+    elif percentage >= 70:
+        status = "Passed"
+    else:
+        status = "Failed"
+        
+    if student_name not in GRADES_DATA:
+        GRADES_DATA[student_name] = {"section": section, "periods": {}}
+        
+    GRADES_DATA[student_name]["periods"][period] = {
+        "marks": marks,
+        "total": total,
+        "average": average,
+        "percentage": percentage,
+        "status": status
+    }
+    
+    print(f"\n[Success] Grades successfully recorded for {student_name}!")
+    print(f"Total: {total:.2f} | Average: {average:.2f} | Percentage: {percentage:.2f}% | Status: {status}")
+
+def record_grade_flow():
+    """Handles section, student, and grading period selection with back navigation."""
+    while True:
+        print(f"\n--- Available Sections ---")
+        sections = list(STUDENT_DATA.keys())
+        for idx, sec in enumerate(sections, 1):
+            print(f"[{idx}] {sec}")
+        print("[0] Return to Teacher Menu")
+            
+        sec_choice = input("Select Section Number: ").strip()
+        if sec_choice == "0":
+            return
+        if sec_choice.isdigit() and 1 <= int(sec_choice) <= len(sections):
+            selected_section = sections[int(sec_choice) - 1]
+            students = STUDENT_DATA[selected_section]
+            
+            while True:
+                print(f"\n--- Student List for {selected_section} ---")
+                for idx, student in enumerate(students, 1):
+                    print(f"[{idx}] {student}")
+                print("[0] Back to Section Selection")
+                    
+                st_choice = input("Select Student Number: ").strip()
+                if st_choice == "0":
+                    break
+                if st_choice.isdigit() and 1 <= int(st_choice) <= len(students):
+                    selected_student = students[int(st_choice) - 1]
+                    
+                    while True:
+                        print(f"\n--- Select Grading Period for {selected_student} ---")
+                        print("[1] P1 (Period 1)")
+                        print("[2] P2 (Period 2)")
+                        print("[3] P3 (Period 3)")
+                        print("[0] Back to Student List")
+                        period_choice = input("Select Period (0-3): ").strip()
+                        
+                        if period_choice == "0":
+                            break
+                        period_map = {"1": "P1", "2": "P2", "3": "P3"}
+                        if period_choice in period_map:
+                            selected_period = period_map[period_choice]
+                            calculate_grades(selected_student, selected_section, selected_period)
+                            return
+                        else:
+                            print("\n[Error] Invalid grading period selection.")
+                else:
+                    print("\n[Error] Invalid student selection.")
+        else:
+            print("\n[Error] Invalid section selection.")
+
+def view_student_grades_table():
+    """Allows students to view their recorded grades immediately with a back option."""
+    while True:
+        print(f"\n==========================================")
+        print(f"              STUDENT PORTAL              ")
+        print(f"==========================================")
+        print("[Type '0' or 'back' to return to Main Menu]")
+        
+        student_name = input("Enter Your Full Name: ").strip()
+        
+        if student_name in ['0', 'back', 'BACK']:
+            return
+            
+        if student_name in GRADES_DATA:
+            student_record = GRADES_DATA[student_name]
+            print(f"\nStudent Name: {student_name}")
+            print(f"Section: {student_record['section']}")
+            print("=" * 80)
+            
+            for period, data in student_record["periods"].items():
+                print(f"\n--- Grading Period: {period} ---")
+                print(f"{'Subject Name':<42} | {'Grade':<6}")
+                print("-" * 53)
+                for subj, mark in data["marks"].items():
+                    print(f"{subj:<42} | {mark:>6.2f}")
+                print("-" * 53)
+                print(f"Total Score: {data['total']:.2f} | Average: {data['average']:.2f} | Percentage: {data['percentage']:.2f}% | Status: {data['status']}")
+                print("=" * 80)
+            
+            input("\nPress Enter to search another name or return...")
+        else:
+            print(f"\n[Notice] No grade records found for '{student_name}'. Please check spelling or consult your instructor.")
+
+def view_all_records():
+    """Displays all student records with direct subject grades in structured terminal tables."""
+    print(f"\n==========================================")
+    print(f"        ALL STUDENT GRADE RECORDS         ")
+    print(f"==========================================")
+    if not GRADES_DATA:
+        print("No records available.")
+        return
+        
+    for student, info in GRADES_DATA.items():
+        print(f"\nStudent Name: {student} | Section: {info['section']}")
+        print("=" * 80)
+        for period, p_data in info["periods"].items():
+            print(f"Period: {period}")
+            print(f"{'Subject Name':<42} | {'Grade':<6}")
+            print("-" * 53)
+            for subj, mark in p_data["marks"].items():
+                print(f"{subj:<42} | {mark:>6.2f}")
+            print("-" * 53)
+            print(f"Total Score: {p_data['total']:.2f} | Average: {p_data['average']:.2f} | Percentage: {p_data['percentage']:.2f}% | Status: {p_data['status']}")
+        print("=" * 80)
+        
+    input("\nPress Enter to return to Teacher Menu...")
+
+def teacher_menu():
+    """Teacher navigation menu."""
+    while True:
+        print(f"\n==========================================")
+        print(f"              TEACHER MENU                ")
+        print(f"==========================================")
+        print("[1] Record / Update Grade (P1, P2, P3)")
+        print("[2] View All Student Records (Summary with Grades)")
+        print("[3] Log Out / Return to Main Menu")
+        choice = input("Select an option (1-3): ").strip()
+        
+        if choice == "1":
+            record_grade_flow()
+        elif choice == "2":
+            view_all_records()
+        elif choice == "3":
+            print("\nLogged out successfully.")
+            break
+        else:
+            print("\n[Error] Invalid selection, please try again.")
+
+def login():
+    """Main login function with loop, conditional branching, and easy undo/back navigation."""
+    while True:
+        print(f"\n==========================================")
+        print(f"             SYSTEM LOG IN                ")
+        print(f"==========================================")
+        print("[1] Student Portal")
+        print("[2] Teacher Portal")
+        print("[3] Exit System")
+        choice = input("Select User Type (1-3): ").strip()
+        
+        if choice == "1":
+            view_student_grades_table()
+        elif choice == "2":
+            print(f"\n[Teacher Access Selected]")
+            username = input("Username [Type 'back' to return]: ").strip()
+            if username.lower() == 'back':
+                continue
+            password = input("Password: ").strip()
+            
+            if username in USERS and USERS[username] == password:
+                print("\nLogin Successful!")
+                teacher_menu()
+            else:
+                print("\n[Error] Invalid Username or Password. Returning to main menu.")
+        elif choice == "3":
+            print("\nExiting system. Goodbye!")
+            break
+        else:
+            print("\n[Error] Invalid choice. Please select 1, 2, or 3.")
+
+if __name__ == "__main__":
+    login()
